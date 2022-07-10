@@ -23,6 +23,7 @@ class ForgotPasswordController : InterfaceExtendedController{
     
     
     //MARK: - outlets
+    
     @IBOutlet weak var forgotpasswordRootView : ForgotPasswordRootView?
     
 }
