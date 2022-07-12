@@ -17,6 +17,7 @@ class InstagramSearchController :  UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .lightGray
+        collectionView.collectionViewLayout = compositionalLayot()
         initialize()
     }
     
@@ -30,42 +31,40 @@ class InstagramSearchController :  UICollectionViewController {
     
     //MARK: - registerCell
     func registerCollectionViewCell(){
-        collectionView.contentInset = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 10.0,right: 10.0)
+        
         self.collectionView.register(InstagramSearchCollectionCell.self, forCellWithReuseIdentifier: cellIndentifier)
+    }
+    
+    //MARK: -  Comp. layout
+    
+    func compositionalLayot() -> UICollectionViewCompositionalLayout {
+        let item = CompositionalLayout.createItem(width: .fractionalWidth(0.5), height: .fractionalHeight(1), spacing: 1)
+        
+        let fullItem = CompositionalLayout.createItem(width: .fractionalWidth(1), height: .fractionalHeight(1), spacing: 1)
+        
+        let verticalGroup = CompositionalLayout.createGroup(alignment: .vertical, width: .fractionalWidth(0.5), height: .fractionalHeight(1.0), item: fullItem, count: 2)
+        
+        let horizontalGroup = CompositionalLayout.createGroup(alignment: .horizontal, width: .fractionalWidth(0.5), height: .fractionalHeight(1.0), items: [verticalGroup])
+        
+        let group = CompositionalLayout.createGroup(alignment: .horizontal, width: .fractionalWidth(1.0), height: .fractionalHeight(0.4), items: [horizontalGroup,item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        // return
+        return UICollectionViewCompositionalLayout(section: section)
     }
 }
 
 extension InstagramSearchController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIndentifier, for: indexPath) as? InstagramSearchCollectionCell else { return UICollectionViewCell() }
         
         cell.backgroundColor = .black
-        if enableAlertnatePostions {
-            cell.allignBiggerImgToleft = enableAlertnatePostions
-            enableAlertnatePostions.toggle()
-        }else{
-            cell.allignBiggerImgToleft = enableAlertnatePostions
-            enableAlertnatePostions.toggle()
-        }
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = UIScreen.main.bounds.size
-        return CGSize(width: size.width, height: size.height * 0.30)
-    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 1.0,left: 1.0,bottom: 1.0,right: 1.0)
-//
-//    }
-    
 }
