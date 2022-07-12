@@ -46,9 +46,13 @@ class InstagramSearchController :  UICollectionViewController {
         
         let horizontalGroup = CompositionalLayout.createGroup(alignment: .horizontal, width: .fractionalWidth(0.5), height: .fractionalHeight(1.0), items: [verticalGroup])
         
-        let group = CompositionalLayout.createGroup(alignment: .horizontal, width: .fractionalWidth(1.0), height: .fractionalHeight(0.4), items: [horizontalGroup,item])
+        let group = CompositionalLayout.createGroup(alignment: .horizontal, width: .fractionalWidth(1.0), height: .absolute(200), items: [horizontalGroup,item])
         
-        let section = NSCollectionLayoutSection(group: group)
+        let group2 = CompositionalLayout.createGroup(alignment: .horizontal, width: .fractionalWidth(1.0), height: .absolute(200), items: [item,horizontalGroup])
+        
+        let mainGroup = CompositionalLayout.createGroup(alignment: .vertical, width: .fractionalWidth(1.0), height: .fractionalHeight(1), items: [group,group2])
+        
+        let section = NSCollectionLayoutSection(group: mainGroup)
         
         // return
         return UICollectionViewCompositionalLayout(section: section)
@@ -58,7 +62,7 @@ class InstagramSearchController :  UICollectionViewController {
 extension InstagramSearchController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 20
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
