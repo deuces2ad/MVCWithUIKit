@@ -17,7 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //MARK: - Setting RootView Controller
         guard let windowScene = (scene as? UIWindowScene) else { return } 
         self.window = UIWindow(windowScene: windowScene)
-        self.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        self.window?.rootViewController = UINavigationController(rootViewController: InstagramSearchController(collectionViewLayout: layout))
        
         self.window?.makeKeyAndVisible()
     }

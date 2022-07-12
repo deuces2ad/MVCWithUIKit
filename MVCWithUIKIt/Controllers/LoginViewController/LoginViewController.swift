@@ -41,6 +41,7 @@ class LoginViewController : InterfaceExtendedController{
             
             guard let weakSelf = self else {return}
             Log.echo(key: weakSelf.TAG, text: "Login Button Tapped")
+            
             guard let forgotVC = ForgotPasswordController.instance() else {
                 Log.echo(key: weakSelf.TAG, text: "Failed to load StortBaord")
                 return
