@@ -33,7 +33,6 @@ class InstagramSearchController :  UICollectionViewController {
         collectionView.contentInset = UIEdgeInsets(top: 10.0,left: 10.0,bottom: 10.0,right: 10.0)
         self.collectionView.register(InstagramSearchCollectionCell.self, forCellWithReuseIdentifier: cellIndentifier)
     }
-
 }
 
 extension InstagramSearchController: UICollectionViewDelegateFlowLayout {
