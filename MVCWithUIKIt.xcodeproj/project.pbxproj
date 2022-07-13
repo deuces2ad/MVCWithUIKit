@@ -113,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				9923FA72287ADD0400657DFC /* AppDelegate */,
-				9923FA7E287ADFA200657DFC /* Model */,
 				9923FA7C287ADF9400657DFC /* Views */,
 				9923FA7D287ADF9B00657DFC /* Controllers */,
 				9923FA94287AFB0F00657DFC /* Storyboards */,
@@ -183,13 +182,6 @@
 				9923FA7F287AE18200657DFC /* LoginViewController */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		9923FA7E287ADFA200657DFC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9923FA7F287AE18200657DFC /* LoginViewController */ = {

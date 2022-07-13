@@ -10,6 +10,7 @@ import UIKit
 
 class InstagramSearchCollectionCell : ExtendedCollectionCell{
     
+    static let cellIndentifier = "InstagramSearchCollectionCell"
     
     //MARK: - Life Cycle
     override func viewDidLayout() {
