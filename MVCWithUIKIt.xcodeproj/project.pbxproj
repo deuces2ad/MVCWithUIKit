@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9909324F287D2EBF0085D995 /* InstagramSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9909324E287D2EBF0085D995 /* InstagramSearchController.swift */; };
+		99093252287D2FB40085D995 /* InstagramSearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99093251287D2FB40085D995 /* InstagramSearchCollectionCell.swift */; };
+		99093254287D30710085D995 /* ExtendedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99093253287D30710085D995 /* ExtendedCollectionCell.swift */; };
+		99093257287D9B310085D995 /* CompositionalGroupAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99093256287D9B310085D995 /* CompositionalGroupAlignment.swift */; };
 		9923FA5F287ADCED00657DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FA5E287ADCED00657DFC /* AppDelegate.swift */; };
 		9923FA61287ADCED00657DFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923FA60287ADCED00657DFC /* SceneDelegate.swift */; };
 		9923FA68287ADCF000657DFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9923FA67287ADCF000657DFC /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9909324E287D2EBF0085D995 /* InstagramSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSearchController.swift; sourceTree = "<group>"; };
+		99093251287D2FB40085D995 /* InstagramSearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSearchCollectionCell.swift; sourceTree = "<group>"; };
+		99093253287D30710085D995 /* ExtendedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedCollectionCell.swift; sourceTree = "<group>"; };
+		99093256287D9B310085D995 /* CompositionalGroupAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalGroupAlignment.swift; sourceTree = "<group>"; };
 		9923FA5B287ADCED00657DFC /* MVCWithUIKIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCWithUIKIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9923FA5E287ADCED00657DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9923FA60287ADCED00657DFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +69,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9909324D287D2E9D0085D995 /* InstagramSearchController */ = {
+			isa = PBXGroup;
+			children = (
+				9909324E287D2EBF0085D995 /* InstagramSearchController.swift */,
+			);
+			path = InstagramSearchController;
+			sourceTree = "<group>";
+		};
+		99093250287D2F8B0085D995 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				99093251287D2FB40085D995 /* InstagramSearchCollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		99093255287D9B2A0085D995 /* CompositionalGroupAlignment */ = {
+			isa = PBXGroup;
+			children = (
+				99093256287D9B310085D995 /* CompositionalGroupAlignment.swift */,
+			);
+			path = CompositionalGroupAlignment;
+			sourceTree = "<group>";
+		};
 		9923FA52287ADCED00657DFC = {
 			isa = PBXGroup;
 			children = (
@@ -81,10 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				9923FA72287ADD0400657DFC /* AppDelegate */,
-				9923FA7E287ADFA200657DFC /* Model */,
 				9923FA7C287ADF9400657DFC /* Views */,
 				9923FA7D287ADF9B00657DFC /* Controllers */,
 				9923FA94287AFB0F00657DFC /* Storyboards */,
+				99093250287D2F8B0085D995 /* Cells */,
 				9923FA83287AE25700657DFC /* Extension */,
 				9923FA73287ADD1500657DFC /* Utils */,
 				9923FA8E287AF28C00657DFC /* AppConfig */,
@@ -107,6 +139,7 @@
 		9923FA73287ADD1500657DFC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				99093255287D9B2A0085D995 /* CompositionalGroupAlignment */,
 				9923FA91287AF8F700657DFC /* InterfaceExtendedController */,
 				9923FA76287ADDD800657DFC /* Debug */,
 				9923FA7B287ADE2C00657DFC /* ExtendedView */,
@@ -127,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9923FA74287ADD8100657DFC /* ExtendedView.swift */,
+				99093253287D30710085D995 /* ExtendedCollectionCell.swift */,
 			);
 			path = ExtendedView;
 			sourceTree = "<group>";
@@ -143,17 +177,11 @@
 		9923FA7D287ADF9B00657DFC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9909324D287D2E9D0085D995 /* InstagramSearchController */,
 				9923FA97287AFB8B00657DFC /* ForgotPasswordController */,
 				9923FA7F287AE18200657DFC /* LoginViewController */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		9923FA7E287ADFA200657DFC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9923FA7F287AE18200657DFC /* LoginViewController */ = {
@@ -303,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9923FA99287AFB9F00657DFC /* ForgotPasswordController.swift in Sources */,
+				99093252287D2FB40085D995 /* InstagramSearchCollectionCell.swift in Sources */,
 				9923FA93287AF91300657DFC /* InterfaceExtendedController.swift in Sources */,
 				9923FA9C287AFE6800657DFC /* ForgotPasswordRootView.swift in Sources */,
 				9923FA81287AE1A500657DFC /* LoginViewController.swift in Sources */,
@@ -312,10 +341,13 @@
 				9923FA7A287ADE1500657DFC /* DevFlag.swift in Sources */,
 				9923FA5F287ADCED00657DFC /* AppDelegate.swift in Sources */,
 				9923FA8B287AE99100657DFC /* LoginTextFieldView.swift in Sources */,
+				9909324F287D2EBF0085D995 /* InstagramSearchController.swift in Sources */,
+				99093257287D9B310085D995 /* CompositionalGroupAlignment.swift in Sources */,
 				9923FA87287AE2FB00657DFC /* LoginRootView.swift in Sources */,
 				9923FA90287AF2C300657DFC /* AppTheme.swift in Sources */,
 				9923FA61287ADCED00657DFC /* SceneDelegate.swift in Sources */,
 				9923FA85287AE28600657DFC /* UIView+Constraints.swift in Sources */,
+				99093254287D30710085D995 /* ExtendedCollectionCell.swift in Sources */,
 				9923FAA1287B07FD00657DFC /* NavigationBarCustomizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +496,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +524,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
